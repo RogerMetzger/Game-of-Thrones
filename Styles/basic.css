@@ -54,7 +54,7 @@ body, html {
 
 }
 #content {
-	padding-bottom: 70px;
+    padding: 20px 20px 70px 20px;
 }
 
 #footer {
@@ -93,6 +93,10 @@ body, html {
 
 .footertext a:active {
     color: #FF0000;
+}
+
+.title{
+    text-align: center;
 }
 
 @media screen and (max-width: 736px) {
@@ -186,5 +190,11 @@ body, html {
 
     .logo {
         display: none;
+    }
+}
+
+@media screen and (min-width: 1280px){
+    .mainpart{
+        box-shadow: 1px 0 20px 1px black, -1px 0px 20px 1px black;
     }
 }
