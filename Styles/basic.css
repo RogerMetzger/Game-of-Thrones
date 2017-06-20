@@ -1,10 +1,3 @@
-.mainpart{
-    width: 100vw;
-    height: 100vh;
-    margin: 0px;
-    background-color: #3D1D1D;
-}
-
 body, html {
   height: 100%;
   color: white;
@@ -12,73 +5,186 @@ body, html {
   margin: 0px;
 }
 
-.nav ul {
-      list-style: none;
-      background-color: #444;
-      text-align: center;
-      padding: 0;
-      margin: 0;
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  padding-left: 15%;
+  padding-right: 15%;
 }
 
-.nav li {
-      font-family: 'Oswald', sans-serif;
-      font-size: 1.2em;
-      line-height: 40px;
-      height: 40px;
-      border-bottom: 1px solid #888;
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  width: 20%;
+  transition: .5s background-color;
 }
 
-.nav a {
-    text-decoration: none;
-    color: #fff;
+.topnav a:active {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+.mainpart{
+    width: 1280px;
+    height: 100%;
+    margin: 0 auto;
+    background-color: #3D1D1D;
+}
+
+#wrapper {
+	min-height: 100%;
+	position: relative;
+}
+#header {
+	background: black;
+
+}
+#content {
+	padding-bottom: 70px;
+}
+
+#footer {
+	background: #333;
+	width: 100%;
+	height: auto;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+.footertext span,
+.footertext a {
     display: block;
-    transition: .3s background-color;
+    height: 100%;
+    padding: 12px;
+    float: left;
+    text-align: center;
+    font-size: 0.8em;
 }
 
-.nav a:hover {
-      background-color: #005f5f;
+.footertext span {
+    width: 60%;
 }
 
-.nav a.active {
-      background-color: #fff;
-      color: #444;
-      cursor: default;
+.footertext a{
+    width: 40%;
+    text-decoration: underline;
+    color: #0000FF;
+    transition: .5s background-color;
 }
 
-@media screen and (min-width: 600px) {
-    .banner{
-        background-color: black;
-        padding-left: 100px;
-    }
-    .bannerimg{
-        background-image: url('../Images/Banner.jpg');
-        height: 185px;
-        background-repeat: no-repeat;
-    }
+.footertext a:hover {
+    color: #800080;
+}
 
-    .navfixer{
-        margin-top: 50px;
-    }
+.footertext a:active {
+    color: #FF0000;
+}
 
-    .nav{
-        position: fixed;
-        width: 1200px;
-    }
-
-    .nav li {
-        width: 150px;
-        border-bottom: none;
-        height: 50px;
-        line-height: 50px;
-        font-size: 1.4em;
-        display: inline-block;
-        margin-right: -4px;
-    }
-
+@media screen and (max-width: 736px) {
     .mainpart{
-        width: 1200px;
-        height: 100vh;
-        margin: 0 auto;
+        width: 100vw;
+        margin: 0px;
         background-color: #3D1D1D;
+    }
+
+    .topnav {
+        padding: 0;
+    }
+
+    .topnav a {
+        width: auto;
+        transition: .5s background-color;
+    }
+
+    .topnav h1 {
+        text-align: center;
+        margin: 0;
+        padding-top: 8px;
+        font-size: 1.5rem;
+        min-height: 50px;
+    }
+
+    .topnav a:not(:first-child) {
+        display: none;
+    }
+    .topnav a.icon {
+        float: left;
+        display: block;
+    }
+
+    .topnav.responsive {
+        position: relative;
+    }
+
+    .topnav.responsive .icon {
+        right: 0;
+        top: 0;
+        float: left;
+    }
+
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+        transition: .5s background-color;
+    }
+}
+
+@media screen and (min-width: 736px) {
+    .banner {
+        background-color: black;
+        padding-left: 10%;
+        float: left;
+        width: 100%;
+    }
+
+    .bannerimg {
+        background-image: url('../Images/Banner.jpg');
+        background-repeat: no-repeat;
+        height: 185px;
+        width: 80%;
+        float: left;
+    }
+
+    .logo {
+        background-image: url('../Images/Logo.png');
+        background-repeat: no-repeat;
+        height: 185px;
+        width: 195px;
+        float: right;
+    }
+
+    .topnav h1 {
+        display: none;
+    }    
+}
+
+@media screen and (min-width: 736px) and (max-width: 1280px){
+    .mainpart{
+        width: auto;
+    }
+
+    .topnav {
+        padding: 0;
+        width: 100%;
+    }
+
+    .logo {
+        display: none;
     }
 }
