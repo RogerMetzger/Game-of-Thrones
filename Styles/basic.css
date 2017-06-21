@@ -1,3 +1,9 @@
+body {
+    background-image: url('../Images/fire_and_ice.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
 body, html {
   height: 100%;
   color: white;
@@ -46,22 +52,24 @@ body, html {
 }
 
 #wrapper {
-	min-height: 100%;
-	position: relative;
+	height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 #header {
 	background: black;
 
 }
 #content {
-    padding: 20px 20px 70px 20px;
+    padding: 20px;
+    overflow-y: auto;
+    flex: 1;
 }
 
 #footer {
 	background: #333;
 	width: 100%;
-	height: auto;
-	position: absolute;
+	height: 40px;
 	bottom: 0;
 	left: 0;
 }
@@ -97,6 +105,20 @@ body, html {
 
 .title{
     text-align: center;
+}
+
+.item {
+    display: flex;
+    background-color: gray;
+    margin-bottom: 20px;
+}
+
+.item:last-child {
+ margin-bottom: 0px !important;
+}
+
+.itemtext {
+    margin: 20px;
 }
 
 @media screen and (max-width: 736px) {
