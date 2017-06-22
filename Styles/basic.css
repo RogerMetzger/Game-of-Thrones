@@ -11,6 +11,8 @@ body, html {
   margin: 0px;
 }
 
+/*Navigation*/
+
 .topnav {
   overflow: hidden;
   background-color: #333;
@@ -44,12 +46,16 @@ body, html {
   display: none;
 }
 
+/*Width Website Content*/
+
 .mainpart{
     width: 1280px;
     height: 100%;
     margin: 0 auto;
     background-color: #3D1D1D;
 }
+
+/*Unterteilung in Header, Content, Footer*/
 
 #wrapper {
 	height: 100vh;
@@ -73,6 +79,8 @@ body, html {
 	bottom: 0;
 	left: 0;
 }
+
+/*Footer*/
 
 .footertext span,
 .footertext a {
@@ -103,9 +111,14 @@ body, html {
     color: #FF0000;
 }
 
+/*Seiten Titel*/
+
 .title{
     text-align: center;
+    padding-bottom: 20px;
 }
+
+/*Flex aufbau für Item in content*/
 
 .item {
     display: flex;
@@ -120,6 +133,8 @@ body, html {
 .itemtext {
     margin: 20px;
 }
+
+/*Mobile Design*/
 
 @media screen and (max-width: 736px) {
     .mainpart{
@@ -169,7 +184,17 @@ body, html {
         text-align: left;
         transition: .5s background-color;
     }
+
+    .item {
+        flex-direction: column;
+    }
+
+    .item img {
+        object-fit: cover;
+    }
 }
+
+/*Tablet & Desktop Design*/
 
 @media screen and (min-width: 736px) {
     .banner {
@@ -198,7 +223,21 @@ body, html {
     .topnav h1 {
         display: none;
     }    
+
+    .reversed {
+        flex-direction: row-reverse;
+    }
+
+    .item {
+        margin-bottom: 40px;
+    }
+
+    #content{
+        padding: 40px;
+    }
 }
+
+/*Tablet Design*/
 
 @media screen and (min-width: 736px) and (max-width: 1280px){
     .mainpart{
@@ -215,8 +254,18 @@ body, html {
     }
 }
 
+/*Desktop Design*/
+
 @media screen and (min-width: 1280px){
     .mainpart{
         box-shadow: 1px 0 20px 1px black, -1px 0px 20px 1px black;
+    }
+}
+
+/*Footer auf zwei Linien wegen zu wenig Platz*/
+
+@media screen and (max-width: 457px){
+    #footer {
+        height: 58px;
     }
 }
