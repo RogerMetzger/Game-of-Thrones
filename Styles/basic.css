@@ -152,20 +152,18 @@ body, html {
 
 .embed {
   position: relative; 
-  padding-bottom: 57.66666666667%; /* ratio 16x9 */
+  padding-bottom: 56.25%; /* ratio 16x9 */
   height: 0; 
   overflow: hidden; 
   width: 100%;
   height: auto;
 }
 .embed iframe {
-
   position: absolute; 
   top: 0; 
   left: 0; 
   width: 100%; 
   height: 100%; 
-  padding: 20px;
 }
 /* ratio 4x3 */
 .embed.ratio4x3 {
