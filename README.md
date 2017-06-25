@@ -9,14 +9,8 @@ Pages:
         -Text einfügen
     -Orte
         -Bild mit Text zusammenschneiden
-    -Impressum
-        -Email
-        -Adresse
-        -Vor-Nachname
-        -Firma
     -Fanart
-        -Eigene Bilder
-        -Bild und Beschreibung
+        -Restliche Bilder/Videos einfügen mit Beschreibung
     -Bilder für Mobile verkleinern
     -Browsers kontrollieren
     -Video zusammenschneiden

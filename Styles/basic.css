@@ -226,6 +226,32 @@ video {
     color: red;
 }
 
+/*Fanart Design*/
+
+.fanartcontainer {
+    column-count: 3;
+    column-width: 300px;
+    column-gap: 40px;
+}
+
+.fanart {
+    display: inline-grid;
+}
+
+.fanart img {
+    width: 100%;
+}
+
+.imagedescription {
+    text-align: center;
+    padding: 10px;
+}
+
+.imagedescription p {
+    padding: 0;
+    margin: 0;
+}
+
 /*Mobile Design*/
 
 @media screen and (max-width: 736px) {
