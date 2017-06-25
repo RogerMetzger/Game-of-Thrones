@@ -100,16 +100,20 @@ body, html {
 .footertext a{
     width: 40%;
     text-decoration: underline;
-    color: #0000FF;
+    color: blue;
     transition: .5s background-color;
 }
 
+.footertext a:visited {
+    color: green;
+}
+
 .footertext a:hover {
-    color: #800080;
+    color: hotpink;
 }
 
 .footertext a:active {
-    color: #FF0000;
+    color: red;
 }
 
 /*Seiten Titel*/
@@ -175,6 +179,53 @@ video {
     height: auto;
 }
 
+/*Impressum Design*/
+
+.impressum {
+    flex-wrap: wrap !important;
+    padding: 20px;
+}
+
+.bold {
+    width: 100%;
+    font-weight: bold;
+}
+
+.impressumtext {
+    width: 100%;
+}
+
+.contact {
+    width: 50%;
+}
+
+.contact p {
+    margin: 0;
+    padding: 0;
+}
+
+.email {
+    padding-top: 25px !important;
+    padding-bottom: 25px !important;
+    display: block;
+}
+
+.contact a:link {
+    color: #0000FF;
+}
+
+.contact a:visited {
+    color: green;
+}
+
+.contact a:hover {
+    color: hotpink;
+}
+
+.contact a:active {
+    color: red;
+}
+
 /*Mobile Design*/
 
 @media screen and (max-width: 736px) {
@@ -233,6 +284,13 @@ video {
 
     .item img {
         object-fit: cover;
+    }
+
+    .contact {
+        width: 100%;
+    }
+    .contact:last-child {
+        padding-top: 1rem;
     }
 }
 
