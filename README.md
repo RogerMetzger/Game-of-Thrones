@@ -8,18 +8,16 @@ Pages:
     -Charakter
         -Text einfügen
     -Fanart
-        -Restliche Bilder/Videos einfügen mit Beschreibung
+        -Restliche Bilder/Videos einfügen mit Beschreibung (noch 2 Bilder und 1 Video)
     -Impressum
         -Kontakt fertig stellen
     -Bilder für Mobile verkleinern
     -Browsers kontrollieren
-        -Inline-Grid gibt nur bei Chrome, durch Block ersetzen? o.ä
-        -iFrame wird bei Edge & Firefox nicht angezeigt
-        -Padding-Bottom auf :Last-Child funktioniert nicht
+        -Bilder werden bei IE11 verzehrt...
     -Video zusammenschneiden
 
 Css:
-    -Mobile Design
+    -Mobile Design (Farben & Background?)
     -Farben anpassen
 
 Dokumentation
