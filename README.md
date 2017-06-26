@@ -7,12 +7,15 @@ TODO:
 Pages:
     -Charakter
         -Text einfügen
-    -Orte
-        -Bild mit Text zusammenschneiden
     -Fanart
         -Restliche Bilder/Videos einfügen mit Beschreibung
+    -Impressum
+        -Kontakt fertig stellen
     -Bilder für Mobile verkleinern
     -Browsers kontrollieren
+        -Inline-Grid gibt nur bei Chrome, durch Block ersetzen? o.ä
+        -iFrame wird bei Edge & Firefox nicht angezeigt
+        -Padding-Bottom auf :Last-Child funktioniert nicht
     -Video zusammenschneiden
 
 Css:
