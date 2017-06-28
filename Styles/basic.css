@@ -137,7 +137,7 @@ body, html {
 
 /*Seiten Titel*/
 
-.title{
+.title {
     text-align: center;
     padding-bottom: 20px;
 }
@@ -334,7 +334,11 @@ video {
     }
 
     .item img {
-        object-fit: cover;
+        object-fit: contain;
+    }
+
+    img {
+        width: 100%;
     }
 
     .contact {
