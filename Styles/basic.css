@@ -277,6 +277,15 @@ video {
     margin: 0;
 }
 
+img {
+    object-fit: contain;
+    object-position: top left;
+}
+
+.reversed img {
+    object-position: top right !important;
+}
+
 /*Mobile Design*/
 
 @media screen and (max-width: 736px) {
@@ -402,6 +411,18 @@ video {
         height: 40px;
         display: block;    
     }
+
+    .ort {
+        width: 70%;
+    }
+
+    .orttext {
+        width: 30%;
+    }
+
+    .meereenfix {
+        min-width: 30%;
+    }
 }
 
 /*Tablet Design*/
@@ -434,5 +455,11 @@ video {
 @media screen and (max-width: 457px){
     #footer {
         height: 58px;
+    }
+}
+
+@media screen and (min-width: 736px) and (max-width: 1000px){
+    .meereenfix {
+        width: 30%;
     }
 }
