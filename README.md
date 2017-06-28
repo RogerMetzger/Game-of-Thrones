@@ -11,7 +11,6 @@ Pages:
         -Restliche Bilder/Videos einfügen mit Beschreibung (noch 2 Bilder und 1 Video)
     -Impressum
         -Kontakt fertig stellen
-    -Bilder für Mobile verkleinern
     -Browsers kontrollieren
         -Bilder werden bei IE11 verzehrt...
     -Video zusammenschneiden
