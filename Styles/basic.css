@@ -1,7 +1,8 @@
 body {
-    background-image: url('../Images/fire_and_ice.jpg');
+    background-image: url('../Images/background.jpg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    background-size: cover;
 }
 
 body, html {
@@ -15,7 +16,7 @@ body, html {
 
 .topnav {
   overflow: hidden;
-  background-color: #333;
+  background-color: 1F1B1E;
   padding-left: 15%;
   padding-right: 15%;
 }
@@ -52,7 +53,7 @@ body, html {
     width: 1280px;
     height: 100%;
     margin: 0 auto;
-    background-color: #3D1D1D;
+    background-color: rgba(117, 5, 5, 0.55);
 }
 
 /*Unterteilung in Header, Content, Footer*/
@@ -67,13 +68,28 @@ body, html {
 
 }
 #content {
-    padding: 20px;
+    padding: 20px 20px 0px 20px;
     overflow-y: auto;
     flex: 1;
 }
 
+/*Firefox & Edge Fix*/
+
+.fanartcontainer:after{
+    content: "";
+    height: 20px;
+    display: block;    
+}
+
+.container:after{
+    content: "";
+    height: 20px;
+    display: block;    
+}
+
 #footer {
-	background: #333;
+    display: flex;
+	background-color: 1F1B1E;
 	width: 100%;
 	height: 40px;
 	bottom: 0;
@@ -81,6 +97,10 @@ body, html {
 }
 
 /*Footer*/
+
+.footertext {
+    width: 100%;
+}
 
 .footertext span,
 .footertext a {
@@ -99,21 +119,25 @@ body, html {
 .footertext a{
     width: 40%;
     text-decoration: underline;
-    color: #0000FF;
+    color: blue;
     transition: .5s background-color;
 }
 
+.footertext a:visited {
+    color: green;
+}
+
 .footertext a:hover {
-    color: #800080;
+    color: hotpink;
 }
 
 .footertext a:active {
-    color: #FF0000;
+    color: red;
 }
 
 /*Seiten Titel*/
 
-.title{
+.title {
     text-align: center;
     padding-bottom: 20px;
 }
@@ -122,25 +146,154 @@ body, html {
 
 .item {
     display: flex;
-    background-color: gray;
+    background-color: #383636;
     margin-bottom: 20px;
 }
 
+/*Firefox & IE11 Fix for display: flex*/
+
+.home {
+    display: block !important;
+}
+
 .item:last-child {
- margin-bottom: 0px !important;
+    margin-bottom: 0px !important;
 }
 
 .itemtext {
     margin: 20px;
 }
 
+/*Aufbau für Homeitem*/
+
+.home {
+    flex-direction: column;
+}
+
+.home span{
+    font-size: 1.3rem;
+    padding: 10px;
+    padding-bottom: 20px;
+    display: block;
+}
+
+/*Für Video / iframe*/
+
+.embed {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed iframe,
+.embed object,
+.embed embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+video {
+    width: 100%;
+    height: auto;
+}
+
+/*Impressum Design*/
+
+.impressum {
+    flex-wrap: wrap !important;
+    padding: 20px;
+}
+
+.bold {
+    width: 100%;
+    font-weight: bold;
+}
+
+.impressumtext {
+    width: 100%;
+}
+
+.contact {
+    width: 50%;
+}
+
+.contact p {
+    margin: 0;
+    padding: 0;
+}
+
+.email {
+    padding-top: 25px !important;
+    padding-bottom: 25px !important;
+    display: block;
+}
+
+.contact a:link {
+    color: #0000FF;
+}
+
+.contact a:visited {
+    color: green;
+}
+
+.contact a:hover {
+    color: hotpink;
+}
+
+.contact a:active {
+    color: red;
+}
+
+/*Fanart Design*/
+
+.fanartcontainer {
+    column-count: 3;
+    column-width: 300px;
+    column-gap: 40px;
+}
+
+.fanart {
+    display: inline-block;
+    display: inline-grid;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.fanart img {
+    width: 100%;
+}
+
+.imagedescription {
+    text-align: center;
+    padding: 10px;
+}
+
+.imagedescription p {
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    object-fit: contain;
+    object-position: top left;
+}
+
+.reversed img {
+    object-position: top right !important;
+}
+
 /*Mobile Design*/
 
 @media screen and (max-width: 736px) {
     .mainpart{
+        background-image: none;
         width: 100vw;
         margin: 0px;
-        background-color: #3D1D1D;
+        background-color: #690D0D;
     }
 
     .topnav {
@@ -190,7 +343,18 @@ body, html {
     }
 
     .item img {
-        object-fit: cover;
+        object-fit: contain;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .contact {
+        width: 100%;
+    }
+    .contact:last-child {
+        padding-top: 1rem;
     }
 }
 
@@ -233,7 +397,31 @@ body, html {
     }
 
     #content{
-        padding: 40px;
+        padding: 40px 40px 0px 40px;
+    }
+
+    .container:after{
+        content: "";
+        height: 40px;
+        display: block;    
+    }
+
+    .fanartcontainer:after{
+        content: "";
+        height: 40px;
+        display: block;    
+    }
+
+    .ort {
+        width: 70%;
+    }
+
+    .orttext {
+        width: 30%;
+    }
+
+    .meereenfix {
+        min-width: 30%;
     }
 }
 
@@ -267,5 +455,11 @@ body, html {
 @media screen and (max-width: 457px){
     #footer {
         height: 58px;
+    }
+}
+
+@media screen and (min-width: 736px) and (max-width: 1000px){
+    .meereenfix {
+        width: 30%;
     }
 }
